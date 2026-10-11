@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy 7th Anniversary!</title>
+  <style>
+    :root {
+      --primary-color: #ff4d6d;
+      --secondary-color: #ffb3c1;
+      --bg-color: #0f051d;
+      --card-bg: rgba(255, 255, 255, 0.1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--bg-color);
+      color: #fff;
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
+
+    /* Interactive Sparkle Canvas */
+    #sparkleCanvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      z-index: 10;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Header Section */
+    .header {
+      margin-bottom: 50px;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .header h1 {
+      font-size: 3rem;
+      color: var(--secondary-color);
+      text-shadow: 0 0 15px rgba(255, 77, 109, 0.8), 0 0 25px rgba(255, 179, 193, 0.6);
+      margin-bottom: 10px;
+    }
+
+    .header p {
+      font-size: 1.4rem;
+      color: #f7cad0;
+      font-style: italic;
+    }
+
+    /* Photo Gallery */
+    .gallery-title {
+      font-size: 2rem;
+      margin-bottom: 30px;
+      color: var(--secondary-color);
+    }
+
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+      margin-bottom: 60px;
+    }
+
+    .polaroid {
+      background: #ffffff;
+      padding: 15px 15px 25px 15px;
+      border-radius: 8px;
+      box-shadow: 0 10px 25px rgba(255, 77, 109, 0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .polaroid:hover {
+      transform: translateY(-10px) scale(1.05) rotate(2deg);
+      box-shadow: 0 15px 35px rgba(255, 77, 109, 0.6);
+    }
+
+    .polaroid img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+
+    .polaroid .caption {
+      margin-top: 12px;
+      color: #333;
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    /* Anniversary Message Card */
+    .message-card {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 179, 193, 0.3);
+      border-radius: 20px;
+      padding: 40px 30px;
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+      margin: 0 auto;
+      max-width: 700px;
+    }
+
+    .message-card h2 {
+      font-size: 2.2rem;
+      color: var(--secondary-color);
+      margin-bottom: 20px;
+    }
+
+    .message-card p {
+      font-size: 1.15rem;
+      line-height: 1.8;
+      color: #f7cad0;
+      white-space: pre-line;
+      text-align: left;
+    }
+
+    /* Sparkle Button */
+    .interactive-btn {
+      margin-top: 30px;
+      padding: 15px 35px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #fff;
+      background: linear-gradient(45deg, #ff4d6d, #ff758f);
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      box-shadow: 0 0 15px rgba(255, 77, 109, 0.6);
+      transition: all 0.3s ease;
+    }
+
+    .interactive-btn:hover {
+      transform: scale(1.08);
+      box-shadow: 0 0 25px rgba(255, 77, 109, 0.9);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <canvas id="sparkleCanvas"></canvas>
+
+  <div class="container">
+    <header class="header">
+      <h1>Happy 7th Anniversary! ❤️</h1>
+      <p>213.6 Days of Loving You ✨</p>
+    </header>
+
+    <h2 class="gallery-title">Our Precious Memories 🌸</h2>
+    <div class="photo-grid">
+      <!-- Replace photo1.jpg, photo2.jpg, etc., with your image paths -->
+      <div class="polaroid">
+        <img src="photo_2026-10-09_22-28-56.jpg">
+        <div class="caption">Where it all began ✨</div>
+      </div>
+      <div class="polaroid">
+        <img src="photo_2026-10-09_22-28-41.jpg"alt="Memory 2">
+        <div class="caption">Our favorite date 🌸</div>
+      </div>
+      <div class="polaroid">
+        <img src="photo_2026-10-09_22-28-36.jpg" alt="Memory 3">
+        <div class="caption">Pagoda date💕</div>
+      </div>
+      <div class="polaroid">
+        <img src="photo_2026-10-09_22-22-14.jpg">
+        <div class="caption">To forever with you 💖</div>
+      </div>
+    </div>
+
+    <div class="message-card">
+      <h2>To My KoKo 💌</h2>
+      <p>
+        Happy 7th Anniversary, Koko.
+
+        Seven months tg shi twr p naw Koko. Baby layy toh ups and downs twy amyrr yee shi khae dl. Baby toh 1 yout nk t yout nrr lel mhu lwl dh tway ll shi kae dl, but bby toh 1 yout nk 1 yout m kwel nai khae buu naw Koko.
+		 
+		Bby atwt Koko thr shi yin br mha ma lo buu. Koko nk atutu bby kyoe ser ml. Bby bawa yee ka Kokoh pel moh bby layy amyrr yee cx dl. 
+		  
+		Tap this buttom below if you promise me that you will love me till the day we die🌺✨
+      </p>
+      <button class="interactive-btn" onclick="burstSparkles()"> Koko and bby's Promise buttom ✨</button>
+    </div>
+</div>
+<script>
+  const canvas = document.getElementById('sparkleCanvas');
+  const ctx = canvas.getContext('2d');
+
+  let width = canvas.width = window.innerWidth;
+  let height = canvas.height = window.innerHeight;
+
+  window.addEventListener('resize', () => {
+    width = canvas.width = window.innerWidth;
+    height = canvas.height = window.innerHeight;
+  });
+
+  // Added extra heart variations for a rich love theme
+  const symbols = ['💖', '🌸', '✨', '💕', '🌺', '⭐', '❤️', '💗', '💓', 'I love you koko ❤️'];
+  
+  // Performance optimization: Pre-allocated Object Pool
+  const MAX_PARTICLES = 150;
+  const pool = [];
+
+  class Particle {
+    constructor() {
+      this.reset();
+    }
+
+    reset(x, y, isBurst = false) {
+      this.x = x !== undefined ? x : Math.random() * width;
+      this.y = y !== undefined ? y : height + 20;
+      
+      // Determine if this particle will display text or an emoji symbol
+      const isText = isBurst && Math.random() < 0.4;
+      if (isText) {
+        this.symbol = 'I love you koko ❤️';
+        this.size = Math.random() * 6 + 18; // Slightly larger font for readability
+        this.isText = true;
+      } else {
+        const heartSymbols = ['💖', '❤️', '💕', '💗', '💓', '🌸', '✨'];
+        this.symbol = heartSymbols[Math.floor(Math.random() * heartSymbols.length)];
+        this.size = Math.random() * 16 + 14;
+        this.isText = false;
+      }
+
+      this.speedX = isBurst ? (Math.random() - 0.5) * 8 : (Math.random() - 0.5) * 1.5;
+      this.speedY = isBurst ? -(Math.random() * 5 + 3) : -(Math.random() * 2 + 1.2);
+      this.opacity = 1;
+      this.fade = Math.random() * 0.010 + 0.005;
+      this.active = true;
+    }
+
+    update(dt) {
+      if (!this.active) return;
+      // Smooth scaling across monitor refresh rates
+      const factor = dt / 16.67; 
+      this.x += this.speedX * factor;
+      this.y += this.speedY * factor;
+      this.opacity -= this.fade * factor;
+
+      if (this.opacity <= 0 || this.y < -30) {
+        this.active = false;
+      }
+    }
+
+    draw() {
+      if (!this.active) return;
+      ctx.globalAlpha = Math.max(0, this.opacity);
+      
+      if (this.isText) {
+        ctx.font = `bold ${this.size}px 'Segoe UI', sans-serif`;
+        ctx.fillStyle = '#ffb3c1';
+        ctx.shadowColor = '#ff4d6d';
+        ctx.shadowBlur = 8;
+        ctx.fillText(this.symbol, this.x, this.y);
+        ctx.shadowBlur = 0; // Reset shadow
+      } else {
+        ctx.font = `${this.size}px sans-serif`;
+        ctx.fillText(this.symbol, this.x, this.y);
+      }
+    }
+  }
+
+  // Pre-populate pool
+  for (let i = 0; i < MAX_PARTICLES; i++) {
+    const p = new Particle();
+    p.active = false;
+    pool.push(p);
+  }
+
+  function spawnParticle(x, y, isBurst = false) {
+    const p = pool.find(item => !item.active);
+    if (p) {
+      p.reset(x, y, isBurst);
+    }
+  }
+
+  let lastTime = performance.now();
+
+  function animate(now) {
+    const dt = now - lastTime;
+    lastTime = now;
+
+    ctx.clearRect(0, 0, width, height);
+
+    // Ambient spawn rate limit
+    if (Math.random() < 0.25) {
+      spawnParticle();
+    }
+
+    for (let i = 0; i < pool.length; i++) {
+      if (pool[i].active) {
+        pool[i].update(dt);
+        pool[i].draw();
+      }
+    }
+
+    requestAnimationFrame(animate);
+  }
+
+  function burstSparkles() {
+    for (let i = 0; i < 50; i++) {
+      spawnParticle(width / 2, height / 2, true);
+    }
+
+    // Update button text to match
+    const btnText = document.getElementById('btnText');
+    if (btnText) {
+      btnText.innerHTML = 'I love you koko ❤️✨';
+    }
+  }
+
+  requestAnimationFrame(animate);
+</script>
+</body>
+</html>
